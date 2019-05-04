@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:dt="http://www.thymeleaf.org/dandelion/datatables">
+	<head>
+		<title>Cinemas</title>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+        rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="/webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	    <script src="js/apimock.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/apiclient.js"></script>
+	</head>
+	<body>
+		<form id="form" class="navbar-form navbar-left">
+		        <div class="form-group">
+		          <input type="search" class="form-control" placeholder="buscadorCinema" id="cine">
+		        </div>
+		 </form>
+		 <div style="text-align: top;">
+    		 <button style="position: absolute;left: 24%; top:1%" name="button" class="btn btn-default" onclick="app.getCinema($('#cine').val())">buscar</button>
+		</div>
+		<!--  	  
+		<input type="search" name="buscadorCinema" id="cine">
+		<button name="button" onclick="app.getCinema($('#cine').val())">Buscar</button>
+		-->
+		<table id="funcionesTabla" class="table">
+			<tr>
+				<th>+</th>
+				<th>Cinema</th>
+				<th>Pelicula</th>
+				<th>Fecha</th>
+				<th>Sillas</th>	
+			</tr>
+			
+		</table>
+		
+		
+	</body>
+</html>
